@@ -1,3 +1,15 @@
-baseURL = 'https://example.org/'
-locale = 'en-us'
-title = 'My New Hugo Project'
+baseURL = 'https://h-mann00.github.io/helenaeliasmusic-ch/'
+languageCode = 'en'
+title = 'Helena Elias Music'
+enableRobotsTXT = true
+
+[outputs]
+  home = ['HTML', 'RSS']
+  section = ['HTML', 'RSS']
+
+[params]
+  author = "Helena Elias Music"
+  description = "Helena & Elias - Dein Duo für jeden Anlass"
+
+[markup.goldmark.renderer]
+  unsafe = true
