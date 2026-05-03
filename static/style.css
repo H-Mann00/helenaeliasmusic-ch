@@ -1,13 +1,13 @@
 :root {
-  --black: #0a0a0a;
-  --dark: #111111;
-  --card: #161616;
-  --border: #222222;
-  --green: #b4ffb4;
-  --green-dim: rgba(180,255,180,0.08);
-  --text: #d8d8d8;
-  --muted: #555555;
-  --faint: #2a2a2a;
+  --black: #f9f9f9;
+  --dark: #f0f0f0;
+  --card: #ffffff;
+  --border: #e0e0e0;
+  --green: #2d8f2d;
+  --green-dim: rgba(45,143,45,0.08);
+  --text: #1a1a1a;
+  --muted: #666666;
+  --faint: #d5d5d5;
 }
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -28,7 +28,7 @@ body::after {
   position: fixed;
   inset: 0;
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='1'/%3E%3C/svg%3E");
-  opacity: 0.025;
+  opacity: 0.015;
   pointer-events: none;
   z-index: 100;
 }
@@ -43,13 +43,13 @@ body::after {
 }
 .glow-1 {
   width: 500px; height: 500px;
-  background: rgba(180,255,180,0.04);
+  background: rgba(45,143,45,0.06);
   top: -100px; left: -100px;
   animation: drift1 18s ease-in-out infinite alternate;
 }
 .glow-2 {
   width: 400px; height: 400px;
-  background: rgba(150,220,255,0.03);
+  background: rgba(100,180,220,0.05);
   bottom: -80px; right: -80px;
   animation: drift2 22s ease-in-out infinite alternate;
 }
@@ -95,7 +95,7 @@ body::after {
   font-size: clamp(52px, 10vw, 96px);
   line-height: 1.0;
   letter-spacing: -0.01em;
-  color: #ebebeb;
+  color: #1a1a1a;
   opacity: 0;
   animation: fadeUp 0.9s 0.35s cubic-bezier(0.22,1,0.36,1) forwards;
 }
@@ -103,6 +103,22 @@ body::after {
 .title em {
   font-style: italic;
   color: var(--green);
+}
+
+.title em.title-dark {
+  color: var(--text);
+}
+
+.hero-image {
+  width: 100%;
+  max-width: 400px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin: 40px auto;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  animation: fadeUp 0.9s 0.45s cubic-bezier(0.22,1,0.36,1) forwards;
 }
 
 .subtitle {
@@ -192,7 +208,7 @@ body::after {
   font-family: 'Cormorant Garamond', serif;
   font-size: 22px;
   font-weight: 400;
-  color: #e0e0e0;
+  color: #1a1a1a;
   line-height: 1.3;
 }
 
