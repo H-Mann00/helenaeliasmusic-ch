@@ -1,19 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Helena Elias Music</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="{{ .Site.BaseURL }}style.css">
-</head>
-<body>
-
-<div class="glow glow-1"></div>
-<div class="glow glow-2"></div>
-<div class="topbar"></div>
-
+{{ define "main" }}
 <!-- Hero -->
 <section class="hero">
   <p class="eyebrow">Helena Elias Music &nbsp;·&nbsp; helenaeliasmusic.ch</p>
@@ -39,6 +24,7 @@
     <div class="card-title">Folge uns</div>
     <div class="card-value">Updates, Clips und Einblicke hinter die Kulissen</div>
     <a class="card-link" href="https://www.instagram.com/helena.music_" target="_blank">@helena.music_ →</a>
+    <a class="card-link" href="https://www.instagram.com/_eb_3" target="_blank">@_eb_3 →</a>
   </div>
 
   <div class="card">
@@ -46,7 +32,7 @@
     <div class="card-title">Jetzt anfragen</div>
     <div class="card-value">
       WhatsApp: +41 76 322 73 28<br>
-      helena.mannion@me.com
+      helenaeliasmusic@gmail.com
     </div>
     <a class="card-link" href="https://wa.me/41763227328" target="_blank">WhatsApp →</a>
   </div>
@@ -64,13 +50,4 @@
     <span class="occasion-pill">Apéro</span>
   </div>
 </section>
-
-<!-- Footer -->
-<footer>
-  <span class="footer-name">Helena &amp; Elias</span>
-  <span class="footer-domain">helenaeliasmusic.ch</span>
-</footer>
-<div class="bottombar"></div>
-
-</body>
-</html>
+{{ end }}

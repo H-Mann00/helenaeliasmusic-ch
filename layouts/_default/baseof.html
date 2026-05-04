@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{{ .Title }} | Helena Elias Music</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{{ .Site.BaseURL }}style.css">
+</head>
+<body>
+
+<div class="glow glow-1"></div>
+<div class="glow glow-2"></div>
+<div class="topbar"></div>
+
+<!-- Navigation -->
+<nav>
+  <a href="{{ .Site.BaseURL }}" {{ if eq .Type "" }}class="active"{{ end }}>Home</a>
+  <a href="{{ .Site.BaseURL }}videos/" {{ if eq .Section "videos" }}class="active"{{ end }}>Videos</a>
+  <a href="{{ .Site.BaseURL }}gallery/" {{ if eq .Section "gallery" }}class="active"{{ end }}>Gallery</a>
+  <a href="{{ .Site.BaseURL }}upcoming-events/" {{ if eq .Section "upcoming-events" }}class="active"{{ end }}>Upcoming Events</a>
+  <a href="{{ .Site.BaseURL }}booking/" {{ if eq .Section "booking" }}class="active"{{ end }}>Booking</a>
+</nav>
+
+{{ block "main" . }}{{ end }}
+
+<!-- Footer -->
+<footer>
+  <span class="footer-name">Helena &amp; Elias</span>
+  <span class="footer-domain">helenaeliasmusic.ch</span>
+</footer>
+<div class="bottombar"></div>
+
+</body>
+</html>
