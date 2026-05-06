@@ -182,8 +182,8 @@ nav a.active {
   }
 
   nav a {
-    padding: 6px 14px;
-    font-size: 10px;
+    padding: 8px 14px;
+    font-size: 12px;
   }
 }
 
@@ -205,8 +205,8 @@ nav a.active {
   }
 
   .lang-link {
-    padding: 6px 10px;
-    font-size: 10px;
+    padding: 8px 12px;
+    font-size: 12px;
   }
 
   .nav-menu {
@@ -225,14 +225,15 @@ nav a.active {
   }
 
   nav a {
-    padding: 14px 16px;
+    padding: 16px 18px;
     border-radius: 0;
     border: none;
     text-align: left;
     background: var(--dark);
     border-bottom: 1px solid var(--border);
     width: 100%;
-    font-size: 11px;
+    font-size: 15px;
+    line-height: 1.5;
   }
 
   nav a:last-child {
@@ -274,7 +275,7 @@ nav a.active {
 }
 
 .eyebrow {
-  font-size: 10px;
+  font-size: 13px;
   letter-spacing: 0.35em;
   text-transform: uppercase;
   color: var(--muted);
@@ -286,7 +287,7 @@ nav a.active {
 .title {
   font-family: 'Cormorant Garamond', serif;
   font-weight: 300;
-  font-size: clamp(52px, 10vw, 96px);
+  font-size: clamp(56px, 11vw, 104px);
   line-height: 1.0;
   letter-spacing: -0.01em;
   color: #1a1a1a;
@@ -335,7 +336,7 @@ nav a.active {
 .subtitle {
   font-family: 'Cormorant Garamond', serif;
   font-weight: 300;
-  font-size: clamp(18px, 4vw, 26px);
+  font-size: clamp(22px, 5vw, 32px);
   color: var(--muted);
   letter-spacing: 0.06em;
   margin-top: 16px;
@@ -375,8 +376,8 @@ nav a.active {
   gap: 14px;
   border: 1px solid rgba(180,255,180,0.3);
   border-radius: 100px;
-  padding: 16px 32px;
-  font-size: clamp(13px, 2vw, 16px);
+  padding: 18px 36px;
+  font-size: clamp(15px, 2.5vw, 18px);
   letter-spacing: 0.25em;
   text-transform: uppercase;
   color: var(--green);
@@ -424,7 +425,7 @@ nav a.active {
 .card:hover { background: var(--card); }
 
 .card-label {
-  font-size: 11px;
+  font-size: 13px;
   font-family: 'Cormorant Garamond', serif;
   letter-spacing: 0.2em;
   text-transform: uppercase;
@@ -451,7 +452,7 @@ nav a.active {
 .card-link {
   display: inline-block;
   margin-top: 4px;
-  font-size: 12px;
+  font-size: 14px;
   color: var(--green);
   text-decoration: none;
   letter-spacing: 0.08em;
@@ -618,7 +619,7 @@ nav a.active {
 }
 
 .occasions-label {
-  font-size: 11px;
+  font-size: 13px;
   font-family: 'Cormorant Garamond', serif;
   letter-spacing: 0.2em;
   text-transform: uppercase;
@@ -660,13 +661,13 @@ footer {
 
 .footer-name {
   font-family: 'Cormorant Garamond', serif;
-  font-size: 16px;
+  font-size: 18px;
   color: var(--muted);
   letter-spacing: 0.05em;
 }
 
 .footer-domain {
-  font-size: 10px;
+  font-size: 12px;
   letter-spacing: 0.2em;
   color: var(--faint);
   text-transform: uppercase;
@@ -688,16 +689,16 @@ footer {
   footer { justify-content: center; text-align: center; }
 
   .eyebrow {
-    font-size: 9px;
+    font-size: 11px;
     margin-bottom: 20px;
   }
 
   .title {
-    font-size: clamp(36px, 8vw, 52px);
+    font-size: clamp(40px, 9vw, 60px);
   }
 
   .subtitle {
-    font-size: clamp(14px, 2.5vw, 18px);
+    font-size: clamp(18px, 3.5vw, 24px);
   }
 
   .badge {
