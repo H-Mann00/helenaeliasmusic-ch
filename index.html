@@ -83,9 +83,22 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 80px 24px 60px;
+    padding: 60px 24px 40px;
     text-align: center;
     gap: 0;
+  }
+
+  @media (max-width: 768px) {
+    .hero {
+      padding: 40px 20px 30px;
+      min-height: auto;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .hero {
+      padding: 30px 16px 20px;
+    }
   }
 
   .eyebrow {
@@ -115,15 +128,32 @@
   }
 
   .hero-image {
-    width: 100%;
+    width: 90%;
     max-width: 400px;
-    height: 300px;
+    height: auto;
+    aspect-ratio: 4/3;
     object-fit: cover;
     border-radius: 8px;
     margin: 40px auto;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     opacity: 0;
     animation: fadeUp 0.9s 0.45s cubic-bezier(0.22,1,0.36,1) forwards;
+  }
+
+  @media (max-width: 768px) {
+    .hero-image {
+      width: 90%;
+      max-width: none;
+      margin: 30px auto;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .hero-image {
+      width: 95%;
+      max-width: none;
+      margin: 20px auto;
+    }
   }
 
   .subtitle {
@@ -316,6 +346,32 @@
   @media (max-width: 480px) {
     .cards { grid-template-columns: 1fr; }
     footer { justify-content: center; text-align: center; }
+
+    .eyebrow {
+      font-size: 9px;
+      margin-bottom: 20px;
+    }
+
+    .title {
+      font-size: clamp(36px, 8vw, 52px);
+    }
+
+    .subtitle {
+      font-size: clamp(14px, 2.5vw, 18px);
+    }
+
+    .badge {
+      padding: 12px 24px;
+      font-size: 12px;
+    }
+
+    .card {
+      padding: 24px 20px;
+    }
+
+    .occasions {
+      padding: 40px 16px;
+    }
   }
 </style>
 </head>
@@ -327,8 +383,6 @@
 
 <!-- Hero -->
 <section class="hero">
-  <p class="eyebrow">Helena Elias Music &nbsp;·&nbsp; helenaeliasmusic.ch</p>
-
   <h1 class="title">Helena<br>&amp; <em>Elias</em></h1>
 
   <img class="hero-image" src="/img/duo.jpg" alt="Helena and Elias">
