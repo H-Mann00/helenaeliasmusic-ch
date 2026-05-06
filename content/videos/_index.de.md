@@ -42,5 +42,5 @@ Hier sind einige unserer Videos, damit du einen Eindruck von unserem Stil bekomm
 </div>
 
 <div class="videos-footer">
-  <p>Check out more videos on our <a href="https://www.youtube.com/@LeloEliMusic" target="_blank">YouTube channel →</a></p>
+  <p>Schau dir mehr Videos auf unserem <a href="https://www.youtube.com/@LeloEliMusic" target="_blank">YouTube-Kanal an →</a></p>
 </div>

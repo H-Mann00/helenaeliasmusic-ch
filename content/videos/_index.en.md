@@ -2,7 +2,7 @@
 title: Videos
 ---
 
-Hier sind einige unserer Videos, damit du einen Eindruck von unserem Stil bekommen kannst.
+Here are some of our videos to give you a feel for our style.
 
 <div class="videos-grid">
   <div class="video-item">

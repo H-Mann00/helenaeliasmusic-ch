@@ -1,0 +1,40 @@
+# Navigation
+nav_home: Home
+nav_videos: Videos
+nav_gallery: Gallery
+nav_setlist: Setlist
+nav_upcoming_events: Upcoming Events
+nav_booking: Booking
+
+# Homepage
+hero_subtitle: Your Duo for Every Occasion
+about_text: Helena & Elias create intimate musical moments across jazz, pop, blues, and classic standards. With over three years of performing together, we bring elegant acoustic sounds and heartfelt vocals to every occasion – whether it's a private dinner, a special celebration, or a quiet evening. We sing in Portuguese, English, and German, allowing us to connect with diverse audiences. Our aim is to create an atmosphere where everyone feels comfortable and personally welcomed.
+
+# Cards
+card_youtube_label: YouTube
+card_youtube_title: Listen to Our Music
+card_youtube_value: Hear our music directly on YouTube
+card_youtube_link: "@LeloEliMusic →"
+
+card_instagram_label: Instagram
+card_instagram_title: Follow Us
+card_instagram_value: Updates, clips, and behind-the-scenes insights
+card_instagram_link: "@helena.music_ →"
+
+card_contact_label: Contact
+card_contact_title: Book Us Now
+card_contact_whatsapp: "WhatsApp: +41 79 913 55 94"
+card_contact_email: "helenaeliasmusic@gmail.com"
+card_contact_link: "WhatsApp →"
+
+# Occasions
+occasions_label: We perform for
+occasion_birthday: Birthday
+occasion_wedding: Wedding
+occasion_corporate: Corporate Event
+occasion_vernissage: Vernissage
+occasion_party: Party
+occasion_apero: Aperitif
+
+# Footer
+footer_domain: helenaeliasmusic.ch

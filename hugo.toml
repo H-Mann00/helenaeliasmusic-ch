@@ -1,5 +1,6 @@
 baseURL = 'https://helenaeliasmusic.ch/'
-locale = 'en'
+defaultContentLanguage = 'de'
+defaultContentLanguageInSubdir = false
 title = 'Helena Elias Music'
 enableRobotsTXT = true
 
@@ -13,3 +14,15 @@ enableRobotsTXT = true
 
 [markup.goldmark.renderer]
   unsafe = true
+
+[languages.de]
+  languageName = "DE"
+  languageCode = "de"
+  weight = 1
+  title = "Helena Elias Music"
+
+[languages.en]
+  languageName = "EN"
+  languageCode = "en"
+  weight = 2
+  title = "Helena Elias Music"

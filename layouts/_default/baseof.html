@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ .Site.Language.Lang }}">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>{{ .Title }} | Helena Elias Music</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Mono:wght@300;400&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/style.css">
 </head>
 <body>
@@ -22,11 +22,18 @@
     <span></span>
   </button>
   <div class="nav-menu" id="navMenu">
-    <a href="{{ .Site.BaseURL }}" {{ if eq .Type "" }}class="active"{{ end }}>Home</a>
-    <a href="{{ .Site.BaseURL }}videos/" {{ if eq .Section "videos" }}class="active"{{ end }}>Videos</a>
-    <a href="{{ .Site.BaseURL }}gallery/" {{ if eq .Section "gallery" }}class="active"{{ end }}>Gallery</a>
-    <a href="{{ .Site.BaseURL }}upcoming-events/" {{ if eq .Section "upcoming-events" }}class="active"{{ end }}>Upcoming Events</a>
-    <a href="{{ .Site.BaseURL }}booking/" {{ if eq .Section "booking" }}class="active"{{ end }}>Booking</a>
+    <a href="{{ relLangURL "/" }}" {{ if eq .Type "" }}class="active"{{ end }}>{{ i18n "nav_home" }}</a>
+    <a href="{{ relLangURL "/videos/" }}" {{ if eq .Section "videos" }}class="active"{{ end }}>{{ i18n "nav_videos" }}</a>
+    <a href="{{ relLangURL "/gallery/" }}" {{ if eq .Section "gallery" }}class="active"{{ end }}>{{ i18n "nav_gallery" }}</a>
+    <a href="{{ relLangURL "/setlist/" }}" {{ if eq .Section "setlist" }}class="active"{{ end }}>{{ i18n "nav_setlist" }}</a>
+    <a href="{{ relLangURL "/upcoming-events/" }}" {{ if eq .Section "upcoming-events" }}class="active"{{ end }}>{{ i18n "nav_upcoming_events" }}</a>
+    <a href="{{ relLangURL "/booking/" }}" {{ if eq .Section "booking" }}class="active"{{ end }}>{{ i18n "nav_booking" }}</a>
+  </div>
+
+  <div class="nav-lang">
+    {{ range .Translations }}
+      <a href="{{ .Permalink }}" class="lang-link{{ if eq .Language.Lang $.Site.Language.Lang }} active{{ end }}">{{ .Language.LanguageName }}</a>
+    {{ end }}
   </div>
 </nav>
 
@@ -52,7 +59,7 @@
 <!-- Footer -->
 <footer>
   <span class="footer-name">Helena &amp; Elias</span>
-  <span class="footer-domain">helenaeliasmusic.ch</span>
+  <span class="footer-domain">{{ i18n "footer_domain" }}</span>
 </footer>
 <div class="bottombar"></div>
 
