@@ -4,12 +4,32 @@ title: Videos
 
 Hier sind einige unserer Videos, damit du einen Eindruck von unserem Stil bekommen kannst.
 
+## Live-Auftritte
+
+### Mänis Saloon, Derendingen
+
 <div class="videos-grid">
   <div class="video-item">
     <div class="video-wrapper">
-      <iframe src="https://www.youtube.com/embed/MffRLpEK1VM" title="Change the World - Eric Clapton (Cover)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      <iframe src="https://player.vimeo.com/video/1195188376" title="Mänis Saloon - Auftritt 1" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
     </div>
-    <h3 class="video-title">Change the World - Eric Clapton (Cover)</h3>
+  </div>
+
+  <div class="video-item">
+    <div class="video-wrapper">
+      <iframe src="https://player.vimeo.com/video/1195188377" title="Mänis Saloon - Auftritt 2" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+    </div>
+  </div>
+</div>
+
+## Studio-Cover
+
+<div class="videos-grid">
+  <div class="video-item">
+    <div class="video-wrapper">
+      <iframe src="https://www.youtube.com/embed/P9SsO7Uf5os" title="While My Guitar Gently Weeps - The Beatles (Cover)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+    <h3 class="video-title">While My Guitar Gently Weeps - The Beatles (Cover)</h3>
   </div>
 
   <div class="video-item">
@@ -21,23 +41,16 @@ Hier sind einige unserer Videos, damit du einen Eindruck von unserem Stil bekomm
 
   <div class="video-item">
     <div class="video-wrapper">
-      <iframe src="https://www.youtube.com/embed/P9SsO7Uf5os" title="While My Guitar Gently Weeps - The Beatles (Cover)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-    </div>
-    <h3 class="video-title">While My Guitar Gently Weeps - The Beatles (Cover)</h3>
-  </div>
-
-  <div class="video-item">
-    <div class="video-wrapper">
-      <iframe src="https://www.youtube.com/embed/WbMxYo7LSyM" title="Back to Black - Amy Winehouse (Cover)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-    </div>
-    <h3 class="video-title">Back to Black - Amy Winehouse (Cover)</h3>
-  </div>
-
-  <div class="video-item">
-    <div class="video-wrapper">
       <iframe src="https://www.youtube.com/embed/xDSV2egkf80" title="Fly Me to the Moon - Frank Sinatra (Cover)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     </div>
     <h3 class="video-title">Fly Me to the Moon - Frank Sinatra (Cover)</h3>
+  </div>
+
+  <div class="video-item">
+    <div class="video-wrapper">
+      <iframe src="https://www.youtube.com/embed/PVn28BtmMWg" title="Tears in Heaven - Eric Clapton (Cover)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+    <h3 class="video-title">Tears in Heaven - Eric Clapton (Cover)</h3>
   </div>
 </div>
 
