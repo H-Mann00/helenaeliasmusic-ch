@@ -9,6 +9,7 @@ nav_booking: Booking
 # Homepage
 hero_subtitle: Your Duo for Every Occasion
 about_text: Helena & Elias create intimate musical moments across jazz, pop, blues, and classic standards. With over three years of performing together, we bring elegant acoustic sounds and heartfelt vocals to every occasion – whether it's a private dinner, a special celebration, or a quiet evening. We sing in Portuguese, English, and German, allowing us to connect with diverse audiences. Our aim is to create an atmosphere where everyone feels comfortable and personally welcomed.
+booking_button: To Booking
 
 # Cards
 card_youtube_label: YouTube
@@ -35,6 +36,19 @@ occasion_corporate: Corporate Event
 occasion_vernissage: Vernissage
 occasion_party: Party
 occasion_apero: Aperitif
+
+# Booking Form
+booking_form_title: Get in Touch for a Booking
+booking_form_name: Name
+booking_form_email: Email
+booking_form_category: Event Type
+booking_form_category_select: Please select...
+booking_form_category_other: Other
+booking_form_message: Message
+booking_form_submit: Send Message
+booking_form_success: Thank you for your message! We'll get back to you soon.
+booking_form_error: Sorry, there was an error submitting the form. Please try again later.
+booking_phone_text: "Or if you prefer to call us, please contact us directly at this number:"
 
 # Footer
 footer_domain: helenaeliasmusic.ch
