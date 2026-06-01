@@ -38,9 +38,10 @@ occasion_party: Party
 occasion_apero: Apéro
 
 # Booking Form
-booking_form_title: Kontaktiere uns für eine Buchung
+booking_form_title: Unverbindliche Buchungsanfrage
 booking_form_name: Name
 booking_form_email: E-Mail
+booking_form_phone: Telefonnummer
 booking_form_category: Art des Events
 booking_form_category_select: Bitte wählen...
 booking_form_category_other: Sonstiges

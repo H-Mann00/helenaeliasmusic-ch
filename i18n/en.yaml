@@ -38,9 +38,10 @@ occasion_party: Party
 occasion_apero: Aperitif
 
 # Booking Form
-booking_form_title: Get in Touch for a Booking
+booking_form_title: Non-Binding Booking Request
 booking_form_name: Name
 booking_form_email: Email
+booking_form_phone: Phone Number
 booking_form_category: Event Type
 booking_form_category_select: Please select...
 booking_form_category_other: Other

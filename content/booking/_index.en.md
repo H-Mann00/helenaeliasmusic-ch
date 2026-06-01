@@ -2,4 +2,4 @@
 title: Booking
 ---
 
-Interested in booking Helena & Elias for your event? Find all the information below and contact us using the form.
+Please describe how you envision your event, and we'll get back to you as soon as possible to discuss the details.
