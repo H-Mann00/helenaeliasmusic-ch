@@ -1042,9 +1042,16 @@ footer {
 .gallery-carousel {
   position: relative;
   margin: 60px auto 80px;
-  max-width: 600px;
+  max-width: 400px;
   opacity: 0;
   animation: fadeUp 0.8s 0.4s cubic-bezier(0.22,1,0.36,1) forwards;
+}
+
+@media (min-width: 769px) {
+  .gallery-carousel {
+    max-width: 85vw;
+    max-width: min(85vw, 1000px);
+  }
 }
 
 .carousel-track-wrapper {
@@ -1057,6 +1064,13 @@ footer {
 .carousel-track {
   display: flex;
   transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  gap: 0;
+}
+
+@media (min-width: 769px) {
+  .carousel-track {
+    gap: 28px;
+  }
 }
 
 .carousel-slide {
@@ -1064,6 +1078,20 @@ footer {
   width: 100%;
   aspect-ratio: 2/3;
   overflow: hidden;
+}
+
+@media (min-width: 769px) {
+  .carousel-slide {
+    width: 78%;
+    aspect-ratio: 4/3;
+    transition: opacity 0.3s ease;
+    border-radius: 8px;
+    opacity: 0.4 !important;
+  }
+
+  .carousel-slide.active {
+    opacity: 1 !important;
+  }
 }
 
 .carousel-slide img {
@@ -1138,24 +1166,62 @@ footer {
 .event-carousel {
   position: relative;
   margin: 60px auto 80px;
-  max-width: 600px;
+  max-width: 400px;
   opacity: 0;
   animation: fadeUp 0.8s 0.4s cubic-bezier(0.22,1,0.36,1) forwards;
+}
+
+@media (min-width: 769px) {
+  .event-carousel {
+    max-width: 85vw;
+    max-width: min(85vw, 1000px);
+  }
+}
+
+.event-carousel .carousel-track {
+  display: flex;
+  transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  gap: 0;
+}
+
+@media (min-width: 769px) {
+  .event-carousel .carousel-track {
+    gap: 28px;
+  }
 }
 
 .event-slide {
   position: relative;
   cursor: pointer;
+  flex-shrink: 0;
+  width: 100%;
+}
+
+@media (min-width: 769px) {
+  .event-slide {
+    width: 78%;
+    transition: opacity 0.3s ease;
+    opacity: 0.4 !important;
+  }
+
+  .event-slide.active {
+    opacity: 1 !important;
+  }
 }
 
 .event-slide-image {
-  flex-shrink: 0;
   width: 100%;
   aspect-ratio: 2/3;
   overflow: hidden;
   border-radius: 8px;
   background: var(--dark);
   border: 1px solid var(--border);
+}
+
+@media (min-width: 769px) {
+  .event-slide-image {
+    aspect-ratio: 4/3;
+  }
 }
 
 .event-slide-image img {
