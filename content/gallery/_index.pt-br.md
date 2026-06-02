@@ -26,7 +26,7 @@ Uma coleção de fotos de nossos shows e eventos.
   </div>
 </div>
 
-<h2>Couch Session, Biel</h2>
+<h2>Couch Session by GWEN, Biel</h2>
 
 <div class="gallery-grid">
   <div class="gallery-item">

@@ -26,7 +26,7 @@ Eine Sammlung von Fotos aus unseren Auftritten und Events.
   </div>
 </div>
 
-<h2>Wohnzimmerkonzert, Biel</h2>
+<h2>Couch Session by GWEN, Biel</h2>
 
 <div class="gallery-grid">
   <div class="gallery-item">
