@@ -124,14 +124,22 @@ nav {
 
 .nav-lang {
   display: flex;
-  gap: 8px;
+  gap: 0;
+  align-items: center;
   position: absolute;
   right: 12px;
   top: 12px;
 }
 
+.lang-separator {
+  font-size: 12px;
+  color: var(--muted);
+  margin: 0 6px;
+  opacity: 0.5;
+}
+
 .lang-link {
-  padding: 8px 12px;
+  padding: 6px 12px;
   font-size: 12px;
   font-family: 'Cormorant Garamond', serif;
   letter-spacing: 0.1em;
@@ -141,16 +149,20 @@ nav {
   border: none;
   background: transparent;
   cursor: pointer;
-  transition: color 0.3s;
+  transition: all 0.3s;
   font-weight: 600;
-}
-
-.lang-link.active {
-  color: var(--green);
+  border-radius: 20px;
+  display: inline-block;
 }
 
 .lang-link:hover {
   color: var(--green);
+}
+
+.lang-link.active {
+  color: var(--card);
+  background: var(--green);
+  box-shadow: 0 2px 8px rgba(45, 143, 45, 0.2);
 }
 
 nav a {
@@ -201,12 +213,18 @@ nav a.active {
   .nav-lang {
     order: 0;
     margin-left: auto;
-    gap: 4px;
+    gap: 0;
+    right: 12px;
+    top: 12px;
+  }
+
+  .lang-separator {
+    margin: 0 4px;
   }
 
   .lang-link {
-    padding: 8px 12px;
-    font-size: 12px;
+    padding: 6px 10px;
+    font-size: 11px;
   }
 
   .nav-menu {

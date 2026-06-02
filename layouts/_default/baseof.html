@@ -31,8 +31,29 @@
   </div>
 
   <div class="nav-lang">
-    {{ range .Translations }}
-      <a href="{{ .Permalink }}" class="lang-link{{ if eq .Language.Lang $.Site.Language.Lang }} active{{ end }}">{{ .Language.LanguageName }}</a>
+    {{ $currentLang := .Site.Language.Lang }}
+    {{ $langList := slice "de" "en" "pt-br" }}
+    {{ $langNames := dict "de" "DE" "en" "EN" "pt-br" "PT" }}
+    {{ range $index, $langCode := $langList }}
+      {{ if $index }}<span class="lang-separator">|</span>{{ end }}
+      {{ $url := relLangURL $.RelPermalink }}
+      {{ if eq $.RelPermalink "/" }}
+        {{ if ne $langCode "de" }}
+          {{ $url = printf "/%s/" $langCode }}
+        {{ else }}
+          {{ $url = "/" }}
+        {{ end }}
+      {{ else }}
+        {{ $isDefaultLang := eq $currentLang "de" }}
+        {{ if and $isDefaultLang (ne $langCode "de") }}
+          {{ $url = printf "/%s%s" $langCode $.RelPermalink }}
+        {{ else if and (ne $isDefaultLang true) (eq $langCode "de") }}
+          {{ $url = replace $.RelPermalink (printf "/%s/" $currentLang) "/" }}
+        {{ else if and (ne $isDefaultLang true) (ne $langCode "de") }}
+          {{ $url = replace $.RelPermalink (printf "/%s/" $currentLang) (printf "/%s/" $langCode) }}
+        {{ end }}
+      {{ end }}
+      <a href="{{ $url }}" class="lang-link{{ if eq $langCode $currentLang }} active{{ end }}">{{ index $langNames $langCode }}</a>
     {{ end }}
   </div>
 </nav>

@@ -26,3 +26,9 @@ enableRobotsTXT = true
   languageCode = "en"
   weight = 2
   title = "Helena Elias Music"
+
+[languages.pt-br]
+  languageName = "PT"
+  languageCode = "pt-BR"
+  weight = 3
+  title = "Helena Elias Music"
