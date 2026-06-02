@@ -2,7 +2,7 @@
 title: Galeria
 ---
 
-Uma coleção de fotos de nossas apresentações e eventos.
+Uma coleção de fotos de nossos shows e eventos.
 
 <h2>Emmenhof Areal, Derendingen</h2>
 
