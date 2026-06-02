@@ -9,15 +9,14 @@ Eine Sammlung von Fotos aus unseren Auftritten und Events.
 <div class="gallery-carousel">
   <div class="carousel-track-wrapper">
     <div class="carousel-track">
+      <div class="carousel-slide"><img src="/img/gallery/DSC08801.jpg" alt="Privater Anlass Auftritt" loading="lazy"></div>
       <div class="carousel-slide"><img src="/img/gallery/DSC08535.jpg" alt="Privater Anlass Auftritt" loading="lazy"></div>
       <div class="carousel-slide"><img src="/img/gallery/DSC08538.jpg" alt="Privater Anlass Auftritt" loading="lazy"></div>
-      <div class="carousel-slide"><img src="/img/gallery/DSC08579.jpg" alt="Privater Anlass Auftritt" loading="lazy"></div>
       <div class="carousel-slide"><img src="/img/gallery/DSC08584.jpg" alt="Privater Anlass Auftritt" loading="lazy"></div>
       <div class="carousel-slide"><img src="/img/gallery/DSC08758.jpg" alt="Privater Anlass Auftritt" loading="lazy"></div>
       <div class="carousel-slide"><img src="/img/gallery/DSC08776.jpg" alt="Privater Anlass Auftritt" loading="lazy"></div>
       <div class="carousel-slide"><img src="/img/gallery/DSC08787.jpg" alt="Privater Anlass Auftritt" loading="lazy"></div>
       <div class="carousel-slide"><img src="/img/gallery/DSC08792.jpg" alt="Privater Anlass Auftritt" loading="lazy"></div>
-      <div class="carousel-slide"><img src="/img/gallery/DSC08801.jpg" alt="Privater Anlass Auftritt" loading="lazy"></div>
     </div>
   </div>
   <button class="carousel-btn carousel-prev" aria-label="Vorheriges Bild">&#8592;</button>
