@@ -1041,8 +1041,8 @@ footer {
 /* ── Gallery Carousel ── */
 .gallery-carousel {
   position: relative;
-  margin-top: 60px;
-  margin-bottom: 80px;
+  margin: 60px auto 80px;
+  max-width: 600px;
   opacity: 0;
   animation: fadeUp 0.8s 0.4s cubic-bezier(0.22,1,0.36,1) forwards;
 }
@@ -1062,7 +1062,7 @@ footer {
 .carousel-slide {
   flex-shrink: 0;
   width: 100%;
-  aspect-ratio: 4/5;
+  aspect-ratio: 2/3;
   overflow: hidden;
 }
 
