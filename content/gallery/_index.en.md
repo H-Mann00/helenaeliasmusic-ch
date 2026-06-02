@@ -11,14 +11,14 @@ A collection of photos from our performances and events.
 <div class="gallery-carousel">
   <div class="carousel-track-wrapper">
     <div class="carousel-track">
-      <div class="carousel-slide"><img src="/img/gallery/DSC08535.jpg" alt="Private Event performance" loading="lazy"></div>
-      <div class="carousel-slide"><img src="/img/gallery/DSC08538.jpg" alt="Private Event performance" loading="lazy"></div>
-      <div class="carousel-slide"><img src="/img/gallery/DSC08584.jpg" alt="Private Event performance" loading="lazy"></div>
-      <div class="carousel-slide"><img src="/img/gallery/DSC08801.jpg" alt="Private Event performance" loading="lazy"></div>
-      <div class="carousel-slide"><img src="/img/gallery/DSC08758.jpg" alt="Private Event performance" loading="lazy"></div>
-      <div class="carousel-slide"><img src="/img/gallery/DSC08776.jpg" alt="Private Event performance" loading="lazy"></div>
-      <div class="carousel-slide"><img src="/img/gallery/DSC08787.jpg" alt="Private Event performance" loading="lazy"></div>
-      <div class="carousel-slide"><img src="/img/gallery/DSC08792.jpg" alt="Private Event performance" loading="lazy"></div>
+      <div class="carousel-slide"><img src="/img/gallery/DSC08535.jpg" alt="Private Event performance"></div>
+      <div class="carousel-slide"><img src="/img/gallery/DSC08538.jpg" alt="Private Event performance"></div>
+      <div class="carousel-slide"><img src="/img/gallery/DSC08584.jpg" alt="Private Event performance"></div>
+      <div class="carousel-slide"><img src="/img/gallery/DSC08801.jpg" alt="Private Event performance"></div>
+      <div class="carousel-slide"><img src="/img/gallery/DSC08758.jpg" alt="Private Event performance"></div>
+      <div class="carousel-slide"><img src="/img/gallery/DSC08776.jpg" alt="Private Event performance"></div>
+      <div class="carousel-slide"><img src="/img/gallery/DSC08787.jpg" alt="Private Event performance"></div>
+      <div class="carousel-slide"><img src="/img/gallery/DSC08792.jpg" alt="Private Event performance"></div>
     </div>
   </div>
   <button class="carousel-btn carousel-prev" aria-label="Previous image">&#8592;</button>
