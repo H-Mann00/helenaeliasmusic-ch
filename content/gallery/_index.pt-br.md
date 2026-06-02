@@ -11,12 +11,12 @@ Uma coleção de fotos de nossos shows e eventos.
     <div class="carousel-track">
       <div class="carousel-slide"><img src="/img/gallery/DSC08801.jpg" alt="Apresentação Evento Privado" loading="lazy"></div>
       <div class="carousel-slide"><img src="/img/gallery/DSC08584.jpg" alt="Apresentação Evento Privado" loading="lazy"></div>
-      <div class="carousel-slide"><img src="/img/gallery/DSC08535.jpg" alt="Apresentação Evento Privado" loading="lazy"></div>
       <div class="carousel-slide"><img src="/img/gallery/DSC08758.jpg" alt="Apresentação Evento Privado" loading="lazy"></div>
       <div class="carousel-slide"><img src="/img/gallery/DSC08776.jpg" alt="Apresentação Evento Privado" loading="lazy"></div>
       <div class="carousel-slide"><img src="/img/gallery/DSC08787.jpg" alt="Apresentação Evento Privado" loading="lazy"></div>
       <div class="carousel-slide"><img src="/img/gallery/DSC08792.jpg" alt="Apresentação Evento Privado" loading="lazy"></div>
       <div class="carousel-slide"><img src="/img/gallery/DSC08538.jpg" alt="Apresentação Evento Privado" loading="lazy"></div>
+      <div class="carousel-slide"><img src="/img/gallery/DSC08535.jpg" alt="Apresentação Evento Privado" loading="lazy"></div>
     </div>
   </div>
   <button class="carousel-btn carousel-prev" aria-label="Imagem anterior">&#8592;</button>
