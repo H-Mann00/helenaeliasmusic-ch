@@ -25,3 +25,14 @@ Eine Sammlung von Fotos aus unseren Auftritten und Events.
     <img src="/img/gallery/edb6758e-ed27-48d5-8011-845a6f2c59b0.jpeg" alt="Veranstaltungsfoto" loading="lazy">
   </div>
 </div>
+
+<h2>Couch Session by GWEN, Biel</h2>
+
+<div class="gallery-grid">
+  <div class="gallery-item">
+    <img src="/img/gallery/Wohnzimmer_Konzert_Biel_1.png" alt="Wohnzimmerkonzert-Auftritt" loading="lazy">
+  </div>
+  <div class="gallery-item">
+    <img src="/img/gallery/Wohnzimmer_Konzert_Biel_2.png" alt="Wohnzimmerkonzert-Auftritt" loading="lazy">
+  </div>
+</div>
