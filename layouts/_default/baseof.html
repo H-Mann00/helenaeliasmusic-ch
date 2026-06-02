@@ -73,6 +73,94 @@ document.addEventListener('DOMContentLoaded', () => {
     if (e.target === lightbox) closeLightbox();
   });
 
+  // Event Carousel setup
+  const eventCarousels = document.querySelectorAll('.event-carousel');
+
+  eventCarousels.forEach(carousel => {
+    const track = carousel.querySelector('.carousel-track');
+    const slides = carousel.querySelectorAll('.event-slide');
+    const prevBtn = carousel.querySelector('.carousel-prev');
+    const nextBtn = carousel.querySelector('.carousel-next');
+    const dotsContainer = carousel.querySelector('.carousel-dots');
+
+    if (!track || !slides.length) return;
+
+    let currentIndex = 0;
+    const slideCount = slides.length;
+    let touchStartX = 0;
+    let touchEndX = 0;
+
+    function createDots() {
+      dotsContainer.innerHTML = '';
+      for (let i = 0; i < slideCount; i++) {
+        const dot = document.createElement('div');
+        dot.className = `carousel-dot ${i === 0 ? 'active' : ''}`;
+        dot.addEventListener('click', () => goToSlide(i));
+        dotsContainer.appendChild(dot);
+      }
+    }
+
+    function updateCarousel() {
+      track.style.transform = `translateX(-${currentIndex * 100}%)`;
+
+      const dots = carousel.querySelectorAll('.carousel-dot');
+      dots.forEach((dot, index) => {
+        dot.classList.toggle('active', index === currentIndex);
+      });
+    }
+
+    function goToSlide(index) {
+      currentIndex = index;
+      updateCarousel();
+    }
+
+    function nextSlide() {
+      currentIndex = (currentIndex + 1) % slideCount;
+      updateCarousel();
+    }
+
+    function prevSlide() {
+      currentIndex = (currentIndex - 1 + slideCount) % slideCount;
+      updateCarousel();
+    }
+
+    function handleSwipe() {
+      const diff = touchStartX - touchEndX;
+      if (Math.abs(diff) > 50) {
+        if (diff > 0) nextSlide();
+        else prevSlide();
+      }
+    }
+
+    // Add click handlers to event slides for lightbox
+    slides.forEach((slide, index) => {
+      const eventImages = slide.dataset.images ? JSON.parse(slide.dataset.images) : [];
+      slide.querySelector('.event-slide-image img').addEventListener('click', () => {
+        if (eventImages.length > 0) {
+          openLightbox(eventImages, 0);
+        }
+      });
+    });
+
+    createDots();
+    prevBtn?.addEventListener('click', prevSlide);
+    nextBtn?.addEventListener('click', nextSlide);
+
+    carousel.addEventListener('touchstart', e => {
+      touchStartX = e.changedTouches[0].screenX;
+    }, false);
+
+    carousel.addEventListener('touchend', e => {
+      touchEndX = e.changedTouches[0].screenX;
+      handleSwipe();
+    }, false);
+
+    carousel.addEventListener('keydown', e => {
+      if (e.key === 'ArrowLeft') prevSlide();
+      else if (e.key === 'ArrowRight') nextSlide();
+    });
+  });
+
   // Carousel setup
   const carousels = document.querySelectorAll('.gallery-carousel');
 
