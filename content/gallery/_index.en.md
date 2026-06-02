@@ -4,7 +4,7 @@ title: Gallery
 
 A collection of photos from our performances and events.
 
-<h2>Private Event</h2>
+<h2>Private Events</h2>
 
 <div class="gallery-carousel">
   <div class="carousel-track-wrapper">
