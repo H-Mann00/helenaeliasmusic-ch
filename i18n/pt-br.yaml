@@ -1,0 +1,55 @@
+# Navigation
+nav_home: Início
+nav_videos: Vídeos
+nav_gallery: Galeria
+nav_setlist: Setlist
+nav_upcoming_events: Próximos Eventos
+nav_booking: Reserva
+
+# Homepage
+hero_subtitle: Seu Duo para Cada Ocasião
+about_text: Helena & Elias criam momentos musicais íntimos através de jazz, pop, blues e clássicos. Com mais de três anos de experiência juntos, trazemos sons acústicos elegantes e vocais sinceros para cada ocasião – seja um jantar privado, uma celebração especial ou uma noite tranquila. Cantamos em português, inglês e alemão, permitindo-nos conectar com públicos diversos. Nosso objetivo é criar uma atmosfera onde todos se sintam à vontade e pessoalmente bem-vindos.
+booking_button: Ir para Reserva
+
+# Cards
+card_youtube_label: YouTube
+card_youtube_title: Ouça Nossa Música
+card_youtube_value: Ouça nossa música direto no YouTube
+card_youtube_link: "@LeloEliMusic →"
+
+card_instagram_label: Instagram
+card_instagram_title: Nos Siga
+card_instagram_value: Atualizações, clips e bastidores
+card_instagram_link: "@helena.music_ →"
+
+card_contact_label: Contato
+card_contact_title: Reserve Agora
+card_contact_whatsapp: "WhatsApp: +41 79 913 55 94"
+card_contact_email: "helenaeliasmusic@gmail.com"
+card_contact_link: "WhatsApp →"
+
+# Occasions
+occasions_label: Tocamos para
+occasion_birthday: Aniversário
+occasion_wedding: Casamento
+occasion_corporate: Evento Corporativo
+occasion_vernissage: Vernissagem
+occasion_party: Festa
+occasion_apero: Aperitivo
+
+# Booking Form
+booking_form_title: Solicitação de Reserva Sem Compromisso
+booking_form_name: Nome
+booking_form_email: Email
+booking_form_phone: Número de Telefone
+booking_form_category: Tipo de Evento
+booking_form_category_select: Por favor, selecione...
+booking_form_category_other: Outro
+booking_form_message: Mensagem
+booking_form_submit: Enviar Mensagem
+booking_form_success: Obrigado pela sua mensagem! Entraremos em contato em breve.
+booking_form_error: Desculpe, houve um erro ao enviar o formulário. Por favor, tente novamente mais tarde.
+booking_phone_text: "Ou se preferir ligar, entre em contato conosco diretamente neste número:"
+
+# Footer
+footer_domain: helenaeliasmusic.ch
