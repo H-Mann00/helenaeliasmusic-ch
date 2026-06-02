@@ -9,6 +9,71 @@
 <link rel="stylesheet" href="/style.css">
 <script>
 document.addEventListener('DOMContentLoaded', () => {
+  // Lightbox modal setup
+  const lightbox = document.createElement('div');
+  lightbox.className = 'lightbox-modal';
+  lightbox.innerHTML = `
+    <div class="lightbox-content">
+      <img src="" alt="">
+      <button class="lightbox-close" aria-label="Close">✕</button>
+      <button class="lightbox-nav lightbox-prev" aria-label="Previous">&#8592;</button>
+      <button class="lightbox-nav lightbox-next" aria-label="Next">&#8594;</button>
+      <div class="lightbox-counter"><span class="current">1</span> / <span class="total">1</span></div>
+    </div>
+  `;
+  document.body.appendChild(lightbox);
+
+  let lightboxCurrentIndex = 0;
+  let lightboxImages = [];
+
+  function closeLightbox() {
+    lightbox.classList.remove('active');
+    document.body.style.overflow = 'auto';
+  }
+
+  function openLightbox(images, index) {
+    lightboxImages = images;
+    lightboxCurrentIndex = index;
+    updateLightbox();
+    lightbox.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function updateLightbox() {
+    const img = lightbox.querySelector('img');
+    const currentSpan = lightbox.querySelector('.current');
+    const totalSpan = lightbox.querySelector('.total');
+    img.src = lightboxImages[lightboxCurrentIndex];
+    currentSpan.textContent = lightboxCurrentIndex + 1;
+    totalSpan.textContent = lightboxImages.length;
+  }
+
+  function nextLightboxImage() {
+    lightboxCurrentIndex = (lightboxCurrentIndex + 1) % lightboxImages.length;
+    updateLightbox();
+  }
+
+  function prevLightboxImage() {
+    lightboxCurrentIndex = (lightboxCurrentIndex - 1 + lightboxImages.length) % lightboxImages.length;
+    updateLightbox();
+  }
+
+  lightbox.querySelector('.lightbox-close').addEventListener('click', closeLightbox);
+  lightbox.querySelector('.lightbox-next').addEventListener('click', nextLightboxImage);
+  lightbox.querySelector('.lightbox-prev').addEventListener('click', prevLightboxImage);
+
+  document.addEventListener('keydown', e => {
+    if (!lightbox.classList.contains('active')) return;
+    if (e.key === 'Escape') closeLightbox();
+    else if (e.key === 'ArrowLeft') prevLightboxImage();
+    else if (e.key === 'ArrowRight') nextLightboxImage();
+  });
+
+  lightbox.addEventListener('click', e => {
+    if (e.target === lightbox) closeLightbox();
+  });
+
+  // Carousel setup
   const carousels = document.querySelectorAll('.gallery-carousel');
 
   carousels.forEach(carousel => {
@@ -24,6 +89,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const slideCount = slides.length;
     let touchStartX = 0;
     let touchEndX = 0;
+
+    // Collect image sources for lightbox
+    const imageSrcs = Array.from(slides).map(slide => slide.querySelector('img').src);
 
     function createDots() {
       dotsContainer.innerHTML = '';
@@ -66,6 +134,13 @@ document.addEventListener('DOMContentLoaded', () => {
         else prevSlide();
       }
     }
+
+    // Add click handlers to images for lightbox
+    slides.forEach((slide, index) => {
+      slide.querySelector('img').addEventListener('click', () => {
+        openLightbox(imageSrcs, index);
+      });
+    });
 
     createDots();
     prevBtn?.addEventListener('click', prevSlide);
