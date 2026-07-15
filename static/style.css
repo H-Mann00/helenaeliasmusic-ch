@@ -750,6 +750,31 @@ footer {
   background: linear-gradient(to right, transparent, var(--green), transparent);
 }
 
+/* ── Upcoming Events ── */
+.upcoming-events {
+  margin-top: 24px;
+  margin-bottom: 40px;
+}
+
+.upcoming-event {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 16px;
+  color: var(--text);
+  margin-bottom: 16px;
+  line-height: 1.6;
+}
+
+.upcoming-event a {
+  color: var(--green);
+  text-decoration: none;
+  transition: border-color 0.2s;
+  border-bottom: 1px solid transparent;
+}
+
+.upcoming-event a:hover {
+  border-color: var(--green);
+}
+
 /* ── Past Events ── */
 .past-events {
   margin-top: 24px;
