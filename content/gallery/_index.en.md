@@ -31,17 +31,29 @@ A collection of photos from our performances and events.
 <div class="event-carousel">
   <div class="carousel-track-wrapper">
     <div class="carousel-track">
-      <div class="event-slide" data-images='["/img/gallery/827fccf4-dff7-48b4-923e-ab975a1e2c54.jpeg", "/img/gallery/edb6758e-ed27-48d5-8011-845a6f2c59b0.jpeg"]'>
+      <div class="event-slide" data-images='["/img/gallery/IMG_6343.jpeg", "/img/gallery/IMG_0495.jpeg"]'>
         <div class="event-slide-image">
-          <img src="/img/gallery/827fccf4-dff7-48b4-923e-ab975a1e2c54.jpeg" alt="Mänis Saloon, Derendingen" loading="lazy">
+          <img src="/img/gallery/IMG_6343.jpeg" alt="Mänis Saloon, Derendingen" loading="lazy">
         </div>
-        <div class="event-slide-title">Mänis Saloon, Derendingen</div>
+        <div class="event-slide-title">Mänis Saloon, Derendingen — 22.08.26</div>
       </div>
-      <div class="event-slide" data-images='["/img/gallery/827fccf4-dff7-48b4-923e-ab975a1e2c54.jpeg", "/img/gallery/edb6758e-ed27-48d5-8011-845a6f2c59b0.jpeg"]'>
+      <div class="event-slide" data-images='["/img/gallery/IMG_6343.jpeg", "/img/gallery/IMG_0495.jpeg"]'>
         <div class="event-slide-image">
-          <img src="/img/gallery/edb6758e-ed27-48d5-8011-845a6f2c59b0.jpeg" alt="Mänis Saloon, Derendingen" loading="lazy">
+          <img src="/img/gallery/IMG_0495.jpeg" alt="Mänis Saloon, Derendingen" loading="lazy">
         </div>
-        <div class="event-slide-title">Mänis Saloon, Derendingen</div>
+        <div class="event-slide-title">Mänis Saloon, Derendingen — 22.08.26</div>
+      </div>
+      <div class="event-slide" data-images='["/img/gallery/Emmenhof_Elias.jpg", "/img/gallery/IMG_9154.jpeg"]'>
+        <div class="event-slide-image">
+          <img src="/img/gallery/Emmenhof_Elias.jpg" alt="Emmenhof Areal, Derendingen" loading="lazy">
+        </div>
+        <div class="event-slide-title">Emmenhof Areal, Derendingen</div>
+      </div>
+      <div class="event-slide" data-images='["/img/gallery/Emmenhof_Elias.jpg", "/img/gallery/IMG_9154.jpeg"]'>
+        <div class="event-slide-image">
+          <img src="/img/gallery/IMG_9154.jpeg" alt="Emmenhof Areal, Derendingen" loading="lazy">
+        </div>
+        <div class="event-slide-title">Emmenhof Areal, Derendingen</div>
       </div>
       <div class="event-slide" data-images='["/img/gallery/Wohnzimmer_Konzert_Biel_1.png", "/img/gallery/Wohnzimmer_Konzert_Biel_2.png"]'>
         <div class="event-slide-image">
@@ -55,17 +67,17 @@ A collection of photos from our performances and events.
         </div>
         <div class="event-slide-title">Couch Session by GWEN, Biel</div>
       </div>
-      <div class="event-slide" data-images='["/img/gallery/Emmenhof_Elias.jpg", "/img/gallery/IMG_9154.jpeg"]'>
+      <div class="event-slide" data-images='["/img/gallery/827fccf4-dff7-48b4-923e-ab975a1e2c54.jpeg", "/img/gallery/edb6758e-ed27-48d5-8011-845a6f2c59b0.jpeg"]'>
         <div class="event-slide-image">
-          <img src="/img/gallery/Emmenhof_Elias.jpg" alt="Emmenhof Areal, Derendingen" loading="lazy">
+          <img src="/img/gallery/827fccf4-dff7-48b4-923e-ab975a1e2c54.jpeg" alt="Mänis Saloon, Derendingen" loading="lazy">
         </div>
-        <div class="event-slide-title">Emmenhof Areal, Derendingen</div>
+        <div class="event-slide-title">Mänis Saloon, Derendingen — 23.05.26</div>
       </div>
-      <div class="event-slide" data-images='["/img/gallery/Emmenhof_Elias.jpg", "/img/gallery/IMG_9154.jpeg"]'>
+      <div class="event-slide" data-images='["/img/gallery/827fccf4-dff7-48b4-923e-ab975a1e2c54.jpeg", "/img/gallery/edb6758e-ed27-48d5-8011-845a6f2c59b0.jpeg"]'>
         <div class="event-slide-image">
-          <img src="/img/gallery/IMG_9154.jpeg" alt="Emmenhof Areal, Derendingen" loading="lazy">
+          <img src="/img/gallery/edb6758e-ed27-48d5-8011-845a6f2c59b0.jpeg" alt="Mänis Saloon, Derendingen" loading="lazy">
         </div>
-        <div class="event-slide-title">Emmenhof Areal, Derendingen</div>
+        <div class="event-slide-title">Mänis Saloon, Derendingen — 23.05.26</div>
       </div>
     </div>
   </div>
