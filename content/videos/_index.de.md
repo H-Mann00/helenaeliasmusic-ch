@@ -6,7 +6,23 @@ Hier sind einige unserer Videos, damit du einen Eindruck von unserem Stil bekomm
 
 ## Live-Auftritte
 
-### Mänis Saloon, Derendingen
+### Mänis Saloon, Derendingen — 22.08.26
+
+<div class="videos-grid">
+  <div class="video-item">
+    <div class="video-wrapper">
+      <iframe src="https://player.vimeo.com/video/1220640370" title="Mänis Saloon - Auftritt 1" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+    </div>
+  </div>
+
+  <div class="video-item">
+    <div class="video-wrapper">
+      <iframe src="https://player.vimeo.com/video/1220640368" title="Mänis Saloon - Auftritt 2" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+    </div>
+  </div>
+</div>
+
+### Mänis Saloon, Derendingen — 23.05.26
 
 <div class="videos-grid">
   <div class="video-item">
@@ -27,7 +43,7 @@ Hier sind einige unserer Videos, damit du einen Eindruck von unserem Stil bekomm
 <div class="videos-grid">
   <div class="video-item">
     <div class="video-wrapper">
-      <iframe src="https://www.youtube.com/embed/P9SsO7Uf5os" title="While My Guitar Gently Weeps - The Beatles (Cover)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      <iframe src="https://www.youtube.com/embed/O3YVn8o4_yU" title="While My Guitar Gently Weeps - The Beatles (Cover)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     </div>
     <h3 class="video-title">While My Guitar Gently Weeps - The Beatles (Cover)</h3>
   </div>
