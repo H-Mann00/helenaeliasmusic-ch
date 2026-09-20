@@ -1,0 +1,54 @@
+{{ define "main" }}
+<section class="page-content">
+  <div class="page-header">
+    <h1 class="page-title">{{ .Title }}</h1>
+  </div>
+
+  <div class="page-body">
+    {{ .Content }}
+  </div>
+
+  {{ $events := hugo.Data.events }}
+  {{ $today := now.Format "2006-01-02" }}
+  {{ $upcoming := sort (where $events "date" ">=" $today) "date" "asc" }}
+  {{ $past := sort (where $events "date" "<" $today) "date" "desc" }}
+
+  <div class="events-page">
+    <div class="event-group">
+      <h2 class="event-group-title">{{ i18n "events_upcoming_heading" }}</h2>
+      {{ if $upcoming }}
+      <div class="event-timeline">
+        {{ range $upcoming }}
+        <div class="event-row">
+          <span class="event-date">{{ (time.AsTime .date).Format "02.01.2006" }}</span>
+          <span class="event-name">
+            {{ if .private }}{{ i18n "event_private_label" }}{{ with .location }} {{ . }}{{ end }}{{ else }}{{ .venue }}{{ end }}
+          </span>
+          {{ if .gallery }}<a class="event-link" href="{{ relLangURL "/gallery/" }}">{{ i18n "events_see_photos" }} →</a>{{ end }}
+        </div>
+        {{ end }}
+      </div>
+      {{ else }}
+      <p class="event-empty">{{ i18n "events_none_upcoming" }}</p>
+      {{ end }}
+    </div>
+
+    {{ if $past }}
+    <div class="event-group">
+      <h2 class="event-group-title">{{ i18n "events_past_heading" }}</h2>
+      <div class="event-timeline">
+        {{ range $past }}
+        <div class="event-row">
+          <span class="event-date">{{ (time.AsTime .date).Format "02.01.2006" }}</span>
+          <span class="event-name">
+            {{ if .private }}{{ i18n "event_private_label" }}{{ with .location }} {{ . }}{{ end }}{{ else }}{{ .venue }}{{ end }}
+          </span>
+          {{ if .gallery }}<a class="event-link" href="{{ relLangURL "/gallery/" }}">{{ i18n "events_see_photos" }} →</a>{{ end }}
+        </div>
+        {{ end }}
+      </div>
+    </div>
+    {{ end }}
+  </div>
+</section>
+{{ end }}
