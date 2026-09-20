@@ -6,15 +6,68 @@ nav_setlist: Setlist
 nav_upcoming_events: Eventos
 nav_booking: Reserva
 
-# Homepage
-hero_subtitle: Seu Duo para Cada Ocasião
-about_text: Helena & Elias criam momentos musicais íntimos através de jazz, bossa nova, pop, blues e clássicos. Com mais de três anos tocando juntos, trazemos sons acústicos elegantes e vocais sinceros para cada ocasião – seja um jantar privado, uma celebração especial ou uma noite tranquila. Cantamos em português, inglês e alemão, permitindo-nos conectar com públicos diversos. Nosso objetivo é criar uma atmosfera onde todos se sintam à vontade e pessoalmente bem-vindos.
-booking_button: Ir para Reserva
+# Motto (brand line, used in hero / footer / motto-editorial section)
+motto_1: Uma Voz
+motto_2: Um Violão
+motto_3: Seu Duo
+
+# Hero
+hero_description: "Música acústica intimista — jazz, bossa nova e clássicos emocionantes — para casamentos, celebrações privadas e eventos especiais."
+hero_image_alt: "Helena e Elias sorrindo juntos ao ar livre, Elias segurando um violão"
+booking_button: "Consultar / Reservar"
+
+# Testimonials
+testimonials_label: O Que Dizem Nossos Clientes
+testimonials_title: Algumas palavras gentis
+
+# Introduction
+intro_label: Quem Somos
+intro_title: Uma voz, um violão
+intro_text: "Uma voz, um violão — e o que a ocasião pedir. Helena & Elias misturam jazz, bossa nova, pop, blues e clássicos atemporais em um som intimista por natureza — feito para preencher um ambiente sem nunca dominá-lo."
+intro_image_alt: "Helena e Elias se apresentando juntos, Helena cantando e Elias tocando violão"
+
+# Music
+music_label: Música
+music_title: Ouça antes de reservar
+music_text: "Alguns favoritos dos nossos sets ao vivo e covers de estúdio — o resto está no YouTube e Instagram."
+music_image_alt: "Elias tocando guitarra elétrica durante uma apresentação"
+music_watch_more: "Veja mais no YouTube →"
+music_follow_instagram: "Siga no Instagram →"
+music_see_all: "Ver todos os vídeos e fotos →"
 
 # Trio Banner
 trio_banner_text: Também Disponível como Trio
 trio_banner_subtitle: Trio de Bossa Nova, Samba & Pop com Percussão, Violão e Voz
 trio_banner_link: Visite Girasol →
+
+# Events
+events_label: Eventos
+events_title: Para todo tipo de ocasião
+events_intro: "De um jantar tranquilo para doze pessoas a um casamento para duzentas, adaptamos o repertório ao ambiente."
+events_image_alt: "Helena cantando ao microfone em um evento ao ar livre"
+event_wedding_title: Casamentos
+event_wedding_desc: "Cerimônia, aperitivo ou recepção — sets acústicos que acompanham o ritmo do dia."
+event_private_title: Celebrações Privadas
+event_private_desc: "Aniversários, bodas e vernissages, tocados com calor e o toque certo de sofisticação."
+event_dinner_title: Jantares & Aperitivos
+event_dinner_desc: "Música ao vivo discreta que deixa a conversa em primeiro plano."
+event_corporate_title: Eventos Corporativos
+event_corporate_desc: "Uma trilha sonora sofisticada e descontraída para clientes e colegas."
+event_intimate_title: Sessões Íntimas ao Vivo
+event_intimate_desc: "Concertos de sala de estar e pequenos palcos — onde começamos, e onde ainda adoramos tocar."
+
+# About
+about_label: Sobre
+about_title: Nós dois
+about_text: "Helena & Elias tocam juntos há mais de três anos, trazendo som acústico elegante e vocais sinceros para casamentos, celebrações privadas, jantares e eventos corporativos. Helena canta em português, inglês e alemão; o violão de Elias transita com naturalidade entre jazz, bossa nova, blues, pop e clássicos. Seja qual for o ambiente, nosso objetivo permanece o mesmo: criar uma atmosfera em que cada convidado se sinta pessoalmente bem-vindo."
+about_image_alt: "Helena e Elias se apresentando juntos em um ambiente interno"
+
+# Motto Editorial
+motto_image_alt: "Helena e Elias se apresentando ao ar livre cercados de vegetação"
+
+# Final CTA
+cta_final_title: "Vamos fazer música para a sua ocasião."
+cta_final_text: "Conte-nos sobre o seu evento e retornaremos em breve."
 
 # Cards
 card_youtube_label: YouTube
@@ -29,11 +82,11 @@ card_instagram_link: "@helena.music_ →"
 
 card_contact_label: Contato
 card_contact_title: Reserve Agora
-card_contact_whatsapp: "WhatsApp: +41 79 913 55 94"
+card_contact_whatsapp: "WhatsApp"
 card_contact_email: "helenaeliasmusic@gmail.com"
 card_contact_link: "WhatsApp →"
 
-# Occasions
+# Occasions (booking form)
 occasions_label: Tocamos para
 occasion_birthday: Aniversário
 occasion_wedding: Casamento
@@ -55,6 +108,13 @@ booking_form_submit: Enviar Mensagem
 booking_form_success: Obrigado pela sua mensagem! Entraremos em contato em breve.
 booking_form_error: Desculpe, houve um erro ao enviar o formulário. Por favor, tente novamente mais tarde.
 booking_phone_text: "Ou se preferir ligar, entre em contato conosco diretamente neste número:"
+
+# Events page (/upcoming-events/)
+events_upcoming_heading: Próximos Eventos
+events_past_heading: Eventos Passados
+events_none_upcoming: Nada agendado publicamente no momento — volte em breve.
+events_see_photos: "Ver Fotos"
+event_private_label: Evento Privado
 
 # Footer
 footer_domain: helenaeliasmusic.ch

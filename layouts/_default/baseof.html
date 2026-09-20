@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html lang="{{ .Site.Language.Lang }}">
 <head>
+<script>document.documentElement.classList.add('js');</script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>{{ .Title }} | Helena Elias Music</title>
+<meta name="description" content="{{ .Site.Params.description }}">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Mono:wght@300;400&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/style.css">
 <script>
 document.addEventListener('DOMContentLoaded', () => {
@@ -73,287 +76,24 @@ document.addEventListener('DOMContentLoaded', () => {
     if (e.target === lightbox) closeLightbox();
   });
 
-  // Event Carousel setup
-  const eventCarousels = document.querySelectorAll('.event-carousel');
-
-  eventCarousels.forEach(carousel => {
-    const track = carousel.querySelector('.carousel-track');
-    const slides = carousel.querySelectorAll('.event-slide');
-    const prevBtn = carousel.querySelector('.carousel-prev');
-    const nextBtn = carousel.querySelector('.carousel-next');
-    const dotsContainer = carousel.querySelector('.carousel-dots');
-
-    if (!track || !slides.length) return;
-
-    let currentIndex = 0;
-    const slideCount = slides.length;
-    let touchStartX = 0;
-    let touchEndX = 0;
-
-    function createDots() {
-      dotsContainer.innerHTML = '';
-      for (let i = 0; i < slideCount; i++) {
-        const dot = document.createElement('div');
-        dot.className = `carousel-dot ${i === 0 ? 'active' : ''}`;
-        dot.addEventListener('click', () => goToSlide(i));
-        dotsContainer.appendChild(dot);
-      }
-    }
-
-    function updateCarousel() {
-      const isDesktop = window.innerWidth >= 769;
-
-      if (isDesktop && slides.length > 0) {
-        const containerWidth = carousel.querySelector('.carousel-track-wrapper').offsetWidth;
-        const slideWidth = containerWidth * 0.78; // 78% width on desktop
-        const gap = 28; // pixels
-        const totalSlideWidth = slideWidth + gap;
-        const offset = (containerWidth - slideWidth) / 2; // Center the slide
-
-        // Position to show current slide centered with adjacent slides peeking
-        const translateValue = -(currentIndex * totalSlideWidth) + offset;
-        track.style.transform = `translateX(${translateValue}px)`;
-
-        // Show faded previews of previous and next slides
-        slides.forEach((slide, index) => {
-          const isPrev = index === (currentIndex - 1 + slideCount) % slideCount;
-          const isNext = index === (currentIndex + 1) % slideCount;
-          const isCurrent = index === currentIndex;
-
-          if (isCurrent) {
-            slide.classList.add('active');
-            slide.style.opacity = '1';
-          } else if (isPrev || isNext) {
-            slide.classList.remove('active');
-            slide.style.opacity = '0.4';
-          } else {
-            slide.classList.remove('active');
-            slide.style.opacity = '0.4';
-          }
-        });
-      } else {
-        track.style.transform = `translateX(-${currentIndex * 100}%)`;
-        slides.forEach((slide, index) => {
-          slide.style.opacity = index === currentIndex ? '1' : '0.4';
-        });
-      }
-
-      const dots = carousel.querySelectorAll('.carousel-dot');
-      dots.forEach((dot, index) => {
-        dot.classList.toggle('active', index === currentIndex);
-      });
-
-      slides.forEach((slide, index) => {
-        slide.classList.toggle('active', index === currentIndex);
-      });
-    }
-
-    function goToSlide(index) {
-      currentIndex = index;
-      updateCarousel();
-    }
-
-    function nextSlide() {
-      currentIndex = (currentIndex + 1) % slideCount;
-      updateCarousel();
-    }
-
-    function prevSlide() {
-      currentIndex = (currentIndex - 1 + slideCount) % slideCount;
-      updateCarousel();
-    }
-
-    function handleSwipe() {
-      const diff = touchStartX - touchEndX;
-      if (Math.abs(diff) > 50) {
-        if (diff > 0) nextSlide();
-        else prevSlide();
-      }
-    }
-
-    // Collect actual displayed images from all event slides for lightbox navigation
-    const allEventImages = [];
-    slides.forEach((slide) => {
-      const img = slide.querySelector('.event-slide-image img');
-      if (img) {
-        allEventImages.push(img.src);
-      }
+  // Masonry photo grid: each .photo-grid is its own lightbox set
+  document.querySelectorAll('.photo-grid').forEach(grid => {
+    const imgs = Array.from(grid.querySelectorAll('img'));
+    const srcs = imgs.map(img => img.src);
+    imgs.forEach((img, index) => {
+      img.addEventListener('click', () => openLightbox(srcs, index));
     });
-
-    // Add click handlers to event slides for lightbox
-    slides.forEach((slide) => {
-      const img = slide.querySelector('.event-slide-image img');
-      if (img) {
-        img.addEventListener('click', () => {
-          if (allEventImages.length > 0) {
-            const clickedImageIndex = allEventImages.indexOf(img.src);
-            openLightbox(allEventImages, clickedImageIndex);
-          }
-        });
-      }
-    });
-
-    createDots();
-    updateCarousel();
-    prevBtn?.addEventListener('click', prevSlide);
-    nextBtn?.addEventListener('click', nextSlide);
-
-    carousel.addEventListener('touchstart', e => {
-      touchStartX = e.changedTouches[0].screenX;
-    }, false);
-
-    carousel.addEventListener('touchend', e => {
-      touchEndX = e.changedTouches[0].screenX;
-      handleSwipe();
-    }, false);
-
-    carousel.addEventListener('keydown', e => {
-      if (e.key === 'ArrowLeft') prevSlide();
-      else if (e.key === 'ArrowRight') nextSlide();
-    });
-  });
-
-  // Carousel setup
-  const carousels = document.querySelectorAll('.gallery-carousel');
-
-  carousels.forEach(carousel => {
-    const track = carousel.querySelector('.carousel-track');
-    const slides = carousel.querySelectorAll('.carousel-slide');
-    const prevBtn = carousel.querySelector('.carousel-prev');
-    const nextBtn = carousel.querySelector('.carousel-next');
-    const dotsContainer = carousel.querySelector('.carousel-dots');
-
-    if (!track || !slides.length) return;
-
-    let currentIndex = 0;
-    const slideCount = slides.length;
-    let touchStartX = 0;
-    let touchEndX = 0;
-
-    // Collect image sources for lightbox
-    const imageSrcs = Array.from(slides).map(slide => slide.querySelector('img').src);
-
-    function createDots() {
-      dotsContainer.innerHTML = '';
-      for (let i = 0; i < slideCount; i++) {
-        const dot = document.createElement('div');
-        dot.className = `carousel-dot ${i === 0 ? 'active' : ''}`;
-        dot.addEventListener('click', () => goToSlide(i));
-        dotsContainer.appendChild(dot);
-      }
-    }
-
-    function updateCarousel() {
-      const isDesktop = window.innerWidth >= 769;
-
-      if (isDesktop && slides.length > 0) {
-        const containerWidth = carousel.querySelector('.carousel-track-wrapper').offsetWidth;
-        const slideWidth = containerWidth * 0.78; // 78% width on desktop
-        const gap = 28; // pixels
-        const totalSlideWidth = slideWidth + gap;
-        const offset = (containerWidth - slideWidth) / 2; // Center the slide
-
-        // Position to show current slide centered with adjacent slides peeking
-        const translateValue = -(currentIndex * totalSlideWidth) + offset;
-        track.style.transform = `translateX(${translateValue}px)`;
-
-        // Show faded previews of previous and next slides
-        slides.forEach((slide, index) => {
-          const isPrev = index === (currentIndex - 1 + slideCount) % slideCount;
-          const isNext = index === (currentIndex + 1) % slideCount;
-          const isCurrent = index === currentIndex;
-
-          if (isCurrent) {
-            slide.classList.add('active');
-            slide.style.opacity = '1';
-          } else if (isPrev || isNext) {
-            slide.classList.remove('active');
-            slide.style.opacity = '0.4';
-          } else {
-            slide.classList.remove('active');
-            slide.style.opacity = '0.4';
-          }
-        });
-      } else {
-        track.style.transform = `translateX(-${currentIndex * 100}%)`;
-        slides.forEach((slide, index) => {
-          slide.style.opacity = index === currentIndex ? '1' : '0.4';
-        });
-      }
-
-      const dots = carousel.querySelectorAll('.carousel-dot');
-      dots.forEach((dot, index) => {
-        dot.classList.toggle('active', index === currentIndex);
-      });
-
-      slides.forEach((slide, index) => {
-        slide.classList.toggle('active', index === currentIndex);
-      });
-    }
-
-    function goToSlide(index) {
-      currentIndex = index;
-      updateCarousel();
-    }
-
-    function nextSlide() {
-      currentIndex = (currentIndex + 1) % slideCount;
-      updateCarousel();
-    }
-
-    function prevSlide() {
-      currentIndex = (currentIndex - 1 + slideCount) % slideCount;
-      updateCarousel();
-    }
-
-    function handleSwipe() {
-      const diff = touchStartX - touchEndX;
-      if (Math.abs(diff) > 50) {
-        if (diff > 0) nextSlide();
-        else prevSlide();
-      }
-    }
-
-    // Add click handlers to images for lightbox
-    slides.forEach((slide, index) => {
-      slide.querySelector('img').addEventListener('click', () => {
-        openLightbox(imageSrcs, index);
-      });
-    });
-
-    createDots();
-    updateCarousel();
-    prevBtn?.addEventListener('click', prevSlide);
-    nextBtn?.addEventListener('click', nextSlide);
-
-    carousel.addEventListener('touchstart', e => {
-      touchStartX = e.changedTouches[0].screenX;
-    }, false);
-
-    carousel.addEventListener('touchend', e => {
-      touchEndX = e.changedTouches[0].screenX;
-      handleSwipe();
-    }, false);
-
-    carousel.addEventListener('keydown', e => {
-      if (e.key === 'ArrowLeft') prevSlide();
-      else if (e.key === 'ArrowRight') nextSlide();
-    });
-
-    window.addEventListener('resize', updateCarousel);
   });
 });
 </script>
 </head>
 <body>
 
-<div class="glow glow-1"></div>
-<div class="glow glow-2"></div>
-<div class="topbar"></div>
-
 <!-- Navigation -->
 <nav>
-  <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+  <a href="{{ relLangURL "/" }}" class="nav-brand">Helena &amp; Elias</a>
+
+  <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="navMenu">
     <span></span>
     <span></span>
     <span></span>
@@ -364,7 +104,7 @@ document.addEventListener('DOMContentLoaded', () => {
     <a href="{{ relLangURL "/gallery/" }}" {{ if eq .Section "gallery" }}class="active"{{ end }}>{{ i18n "nav_gallery" }}</a>
     <a href="{{ relLangURL "/setlist/" }}" {{ if eq .Section "setlist" }}class="active"{{ end }}>{{ i18n "nav_setlist" }}</a>
     <a href="{{ relLangURL "/upcoming-events/" }}" {{ if eq .Section "upcoming-events" }}class="active"{{ end }}>{{ i18n "nav_upcoming_events" }}</a>
-    <a href="{{ relLangURL "/booking/" }}" {{ if eq .Section "booking" }}class="active"{{ end }}>{{ i18n "nav_booking" }}</a>
+    <a href="{{ relLangURL "/booking/" }}" class="nav-cta {{ if eq .Section "booking" }}active{{ end }}">{{ i18n "nav_booking" }}</a>
   </div>
 
   <div class="nav-lang">
@@ -408,18 +148,80 @@ document.addEventListener('DOMContentLoaded', () => {
     link.addEventListener('click', () => {
       navMenu.classList.remove('active');
       navToggle.classList.remove('active');
+      navToggle.setAttribute('aria-expanded', 'false');
     });
   });
+
+  navToggle.addEventListener('click', () => {
+    navToggle.setAttribute('aria-expanded', navToggle.classList.contains('active') ? 'true' : 'false');
+  });
+
+  // Sticky nav: add a subtle background/shadow once the page has scrolled
+  const siteNav = document.querySelector('nav');
+  const onScroll = () => siteNav.classList.toggle('scrolled', window.scrollY > 12);
+  onScroll();
+  window.addEventListener('scroll', onScroll, { passive: true });
 </script>
 
 {{ block "main" . }}{{ end }}
 
+<script>
+  // Subtle scroll reveal for editorial sections (skipped for reduced-motion users).
+  // Runs after the main content above so `.reveal` elements actually exist in the DOM.
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const revealEls = document.querySelectorAll('.reveal');
+  if (prefersReducedMotion || !('IntersectionObserver' in window)) {
+    revealEls.forEach(el => el.classList.add('is-visible'));
+  } else {
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15, rootMargin: '0px 0px -60px 0px' });
+    revealEls.forEach(el => revealObserver.observe(el));
+  }
+</script>
+
 <!-- Footer -->
 <footer>
-  <span class="footer-name">Helena &amp; Elias</span>
-  <span class="footer-domain">{{ i18n "footer_domain" }}</span>
+  <svg class="icon-defs" aria-hidden="true">
+    <defs>
+      <symbol id="icon-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="m3.5 6.5 8.5 6.5 8.5-6.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+      <symbol id="icon-phone" viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.2 6.6 6.6l2.2-2.2c.3-.3.7-.4 1.1-.3 1.2.4 2.5.6 3.8.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.7c.6 0 1 .4 1 1 0 1.3.2 2.6.6 3.8.1.4 0 .8-.3 1.1L6.6 10.8Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+      <symbol id="icon-chat" viewBox="0 0 24 24"><path d="M3 5.5A2.5 2.5 0 0 1 5.5 3h13A2.5 2.5 0 0 1 21 5.5v8a2.5 2.5 0 0 1-2.5 2.5H9l-5 4v-4H5.5A2.5 2.5 0 0 1 3 13.5v-8Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></symbol>
+      <symbol id="icon-instagram" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="17.4" cy="6.6" r="1.1" fill="currentColor"/></symbol>
+      <symbol id="icon-youtube" viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="4" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M10 9.3v5.4l5-2.7-5-2.7Z" fill="currentColor"/></symbol>
+      <symbol id="icon-gallery" viewBox="0 0 24 24"><rect x="3" y="3" width="8" height="8" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.6"/><rect x="13" y="3" width="8" height="8" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.6"/><rect x="3" y="13" width="8" height="8" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.6"/><rect x="13" y="13" width="8" height="8" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.6"/></symbol>
+    </defs>
+  </svg>
+
+  <div class="footer-inner">
+    <div class="footer-col footer-brand">
+      <span class="footer-name">Helena &amp; Elias</span>
+      <span class="footer-motto">{{ i18n "motto_1" }} · {{ i18n "motto_2" }} · {{ i18n "motto_3" }}</span>
+    </div>
+
+    <div class="footer-col footer-contact">
+      <a href="mailto:{{ i18n "card_contact_email" }}"><svg class="footer-icon"><use href="#icon-mail"></use></svg>{{ i18n "card_contact_email" }}</a>
+      <a href="tel:+41799135594"><svg class="footer-icon"><use href="#icon-phone"></use></svg>+41 79 913 55 94</a>
+      <a href="https://wa.me/41799135594" target="_blank" rel="noopener"><svg class="footer-icon"><use href="#icon-chat"></use></svg>{{ i18n "card_contact_whatsapp" }}</a>
+    </div>
+
+    <div class="footer-col footer-social">
+      <a href="https://www.youtube.com/@LeloEliMusic" target="_blank" rel="noopener"><svg class="footer-icon"><use href="#icon-youtube"></use></svg>YouTube</a>
+      <a href="https://www.instagram.com/helena.music_" target="_blank" rel="noopener"><svg class="footer-icon"><use href="#icon-instagram"></use></svg>@helena.music_</a>
+      <a href="https://www.instagram.com/_eb_3" target="_blank" rel="noopener"><svg class="footer-icon"><use href="#icon-instagram"></use></svg>@_eb_3</a>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <span>&copy; {{ now.Year }} Helena &amp; Elias</span>
+    <span class="footer-domain">{{ i18n "footer_domain" }}</span>
+  </div>
 </footer>
-<div class="bottombar"></div>
 
 </body>
 </html>

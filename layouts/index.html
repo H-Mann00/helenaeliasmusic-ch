@@ -1,64 +1,138 @@
 {{ define "main" }}
-<!-- Hero -->
-<section class="hero">
-  <h1 class="title"><em class="title-dark">Helena</em><br>&amp; <em>Elias</em></h1>
+<main class="home">
 
-  <img class="hero-image" src="/img/duo.jpg" alt="Helena and Elias">
-
-  <p class="subtitle">{{ i18n "hero_subtitle" }}</p>
-
-  <p class="about-text">{{ i18n "about_text" }}</p>
-
-  <a href="{{ relLangURL "/booking/" }}" class="cta-button">{{ i18n "booking_button" }}</a>
-</section>
-
-<!-- Girasol Trio Banner -->
-<section class="trio-banner">
-  <div class="trio-banner-content">
-    <p class="trio-banner-text">{{ i18n "trio_banner_text" }}</p>
-    <p class="trio-banner-subtitle">{{ i18n "trio_banner_subtitle" }}</p>
-    <a href="https://www.girasol-music.ch" target="_blank" class="trio-banner-button">{{ i18n "trio_banner_link" }}</a>
-  </div>
-</section>
-
-<!-- Contact Cards -->
-<div class="cards">
-  <div class="card">
-    <span class="card-label">{{ i18n "card_youtube_label" }}</span>
-    <div class="card-title">{{ i18n "card_youtube_title" }}</div>
-    <div class="card-value">{{ i18n "card_youtube_value" }}</div>
-    <a class="card-link" href="https://www.youtube.com/@LeloEliMusic" target="_blank">{{ i18n "card_youtube_link" }}</a>
-  </div>
-
-  <div class="card">
-    <span class="card-label">{{ i18n "card_instagram_label" }}</span>
-    <div class="card-title">{{ i18n "card_instagram_title" }}</div>
-    <div class="card-value">{{ i18n "card_instagram_value" }}</div>
-    <a class="card-link" href="https://www.instagram.com/helena.music_" target="_blank">@helena.music_ →</a>
-    <a class="card-link" href="https://www.instagram.com/_eb_3" target="_blank">@_eb_3 →</a>
-  </div>
-
-  <div class="card">
-    <span class="card-label">{{ i18n "card_contact_label" }}</span>
-    <div class="card-title">{{ i18n "card_contact_title" }}</div>
-    <div class="card-value">
-      {{ i18n "card_contact_whatsapp" }}<br>
-      {{ i18n "card_contact_email" }}
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1 class="hero-name">Helena<br>&amp; Elias</h1>
+      <p class="hero-motto">{{ i18n "motto_1" }}&nbsp;·&nbsp;{{ i18n "motto_2" }}&nbsp;·&nbsp;{{ i18n "motto_3" }}</p>
+      <p class="hero-description">{{ i18n "hero_description" }}</p>
+      <a href="{{ relLangURL "/booking/" }}" class="btn btn-primary">{{ i18n "booking_button" }}</a>
     </div>
-    <a class="card-link" href="https://wa.me/41799135594" target="_blank">{{ i18n "card_contact_link" }}</a>
-  </div>
-</div>
+    <div class="hero-media">
+      <picture>
+        <source media="(max-width: 768px)" srcset="/img/home/hero-duo-mobile.jpg">
+        <img src="/img/home/hero-duo.jpg" alt="{{ i18n "hero_image_alt" }}" fetchpriority="high">
+      </picture>
+    </div>
+  </section>
 
-<!-- Occasions -->
-<section class="occasions">
-  <p class="occasions-label">{{ i18n "occasions_label" }}</p>
-  <div class="occasions-grid">
-    <span class="occasion-pill">{{ i18n "occasion_birthday" }}</span>
-    <span class="occasion-pill">{{ i18n "occasion_wedding" }}</span>
-    <span class="occasion-pill">{{ i18n "occasion_corporate" }}</span>
-    <span class="occasion-pill">{{ i18n "occasion_vernissage" }}</span>
-    <span class="occasion-pill">{{ i18n "occasion_party" }}</span>
-    <span class="occasion-pill">{{ i18n "occasion_apero" }}</span>
-  </div>
-</section>
+  <!-- Testimonials
+       Sourced from data/testimonials.yaml. That file ships empty on purpose —
+       this whole section is skipped until it has at least one real entry, so
+       nothing fake ever gets published. Add real client quotes there and this
+       section reappears automatically; no template changes needed. -->
+  {{ $testimonials := hugo.Data.testimonials }}
+  {{ if $testimonials }}
+  <section class="testimonials reveal">
+    <p class="eyebrow">{{ i18n "testimonials_label" }}</p>
+    <h2 class="section-title">{{ i18n "testimonials_title" }}</h2>
+
+    <div class="testimonial-grid">
+      {{ range $testimonials }}
+      <figure class="testimonial-card">
+        <blockquote>&ldquo;{{ .quote }}&rdquo;</blockquote>
+        <figcaption>{{ .attribution }}</figcaption>
+      </figure>
+      {{ end }}
+    </div>
+  </section>
+  {{ end }}
+
+  <!-- Introduction -->
+  <section class="intro reveal">
+    <div class="intro-image">
+      <img src="/img/home/intro-duo.jpg" alt="{{ i18n "intro_image_alt" }}" loading="lazy">
+    </div>
+    <div class="intro-content">
+      <p class="eyebrow">{{ i18n "intro_label" }}</p>
+      <h2 class="section-title">{{ i18n "intro_title" }}</h2>
+      <p class="section-text">{{ i18n "intro_text" }}</p>
+    </div>
+  </section>
+
+  <!-- Music -->
+  <section class="music reveal">
+    <div class="music-content">
+      <p class="eyebrow">{{ i18n "music_label" }}</p>
+      <h2 class="section-title">{{ i18n "music_title" }}</h2>
+      <p class="section-text">{{ i18n "music_text" }}</p>
+
+      <div class="music-video-wrapper">
+        <iframe src="https://www.youtube.com/embed/xDSV2egkf80" title="Fly Me to the Moon - Frank Sinatra (Cover)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
+      </div>
+
+      <div class="music-links">
+        <a href="https://www.youtube.com/@LeloEliMusic" target="_blank" rel="noopener"><svg class="music-link-icon"><use href="#icon-youtube"></use></svg>{{ i18n "music_watch_more" }}</a>
+        <a href="https://www.instagram.com/helena.music_" target="_blank" rel="noopener"><svg class="music-link-icon"><use href="#icon-instagram"></use></svg>{{ i18n "music_follow_instagram" }}</a>
+        <a href="{{ relLangURL "/videos/" }}"><svg class="music-link-icon"><use href="#icon-gallery"></use></svg>{{ i18n "music_see_all" }}</a>
+      </div>
+    </div>
+    <div class="music-image">
+      <img src="/img/home/events-helena.jpg" alt="{{ i18n "events_image_alt" }}" loading="lazy">
+    </div>
+  </section>
+
+  <!-- Girasol Trio Banner -->
+  <section class="trio-banner reveal">
+    <div class="trio-banner-content">
+      <p class="trio-banner-text">{{ i18n "trio_banner_text" }}</p>
+      <p class="trio-banner-subtitle">{{ i18n "trio_banner_subtitle" }}</p>
+      <a href="https://www.girasol-music.ch" target="_blank" rel="noopener" class="trio-banner-button">{{ i18n "trio_banner_link" }}</a>
+    </div>
+  </section>
+
+  <!-- Events -->
+  <section class="events reveal">
+    <div class="events-content">
+      <p class="eyebrow">{{ i18n "events_label" }}</p>
+      <h2 class="section-title">{{ i18n "events_title" }}</h2>
+      <p class="section-text">{{ i18n "events_intro" }}</p>
+
+      <ul class="events-list">
+        <li><h3>{{ i18n "event_wedding_title" }}</h3><p>{{ i18n "event_wedding_desc" }}</p></li>
+        <li><h3>{{ i18n "event_private_title" }}</h3><p>{{ i18n "event_private_desc" }}</p></li>
+        <li><h3>{{ i18n "event_dinner_title" }}</h3><p>{{ i18n "event_dinner_desc" }}</p></li>
+        <li><h3>{{ i18n "event_corporate_title" }}</h3><p>{{ i18n "event_corporate_desc" }}</p></li>
+        <li><h3>{{ i18n "event_intimate_title" }}</h3><p>{{ i18n "event_intimate_desc" }}</p></li>
+      </ul>
+    </div>
+    <div class="events-image">
+      <img src="/img/home/music-elias.jpg" alt="{{ i18n "music_image_alt" }}" loading="lazy">
+    </div>
+  </section>
+
+  <!-- About -->
+  <section class="about reveal">
+    <div class="about-image">
+      <img src="/img/home/about-duo.jpg" alt="{{ i18n "about_image_alt" }}" loading="lazy">
+    </div>
+    <div class="about-content">
+      <p class="eyebrow">{{ i18n "about_label" }}</p>
+      <h2 class="section-title">{{ i18n "about_title" }}</h2>
+      <p class="section-text">{{ i18n "about_text" }}</p>
+    </div>
+  </section>
+
+  <!-- Motto Editorial -->
+  <section class="motto-editorial reveal">
+    <img src="/img/home/motto-duo.jpg" alt="{{ i18n "motto_image_alt" }}" loading="lazy">
+    <div class="motto-editorial-overlay">
+      <p>{{ i18n "motto_1" }}</p>
+      <p>{{ i18n "motto_2" }}</p>
+      <p>{{ i18n "motto_3" }}</p>
+    </div>
+  </section>
+
+  <!-- Final CTA -->
+  <section class="cta-final reveal">
+    <div class="cta-final-overlay">
+      <h2>{{ i18n "cta_final_title" }}</h2>
+      <p>{{ i18n "cta_final_text" }}</p>
+      <a href="{{ relLangURL "/booking/" }}" class="btn btn-primary">{{ i18n "booking_button" }}</a>
+      <a href="tel:+41799135594" class="cta-final-phone">+41 79 913 55 94</a>
+    </div>
+  </section>
+
+</main>
 {{ end }}

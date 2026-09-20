@@ -1,0 +1,43 @@
+# All performances — past and upcoming, in one list.
+#
+# The Events page automatically splits these into "Upcoming" vs "Past" by
+# comparing each date to today, and sorts them (soonest-first for upcoming,
+# most-recent-first for past) — so you never need to move an entry between
+# sections by hand as dates pass. Just add new bookings here.
+#
+# Fields:
+#   date:     "YYYY-MM-DD" (required)
+#   venue:    venue/event name, used as-is in every language since it's a
+#             proper noun (e.g. "Mänis Saloon, Derendingen"). Omit for a
+#             private event with no public venue name to show.
+#   private:  true for a private booking — shows a translated "Private Event"
+#             label instead of a venue name
+#   location: optional extra note for a private event, shown as-is after the
+#             private-event label (e.g. "in The Hague, Netherlands")
+#   gallery:  true if there are photos of this event on /gallery/
+
+- date: "2026-05-09"
+  venue: "Couch Session by GWEN, Biel"
+  gallery: true
+
+- date: "2026-05-23"
+  venue: "Mänis Saloon, Derendingen"
+  gallery: true
+
+- date: "2026-05-23"
+  venue: "Openhouse Emmenhof, Derendingen"
+  gallery: true
+
+- date: "2026-05-30"
+  private: true
+
+- date: "2026-08-22"
+  venue: "Mänis Saloon, Derendingen"
+  gallery: true
+
+- date: "2026-08-29"
+  private: true
+  location: "in The Hague, Netherlands"
+
+- date: "2026-11-28"
+  venue: "Mänis Saloon, Derendingen"

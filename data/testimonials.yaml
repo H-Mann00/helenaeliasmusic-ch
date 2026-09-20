@@ -1,0 +1,27 @@
+# Real client testimonials for the homepage "Testimonials" section.
+#
+# This file ships EMPTY on purpose. As long as it's empty, the whole
+# Testimonials section is skipped on the homepage (see layouts/index.html) —
+# so nothing fake or placeholder ever gets published.
+#
+# To bring the section back: uncomment/add entries below, one per quote,
+# in whichever language the client actually wrote it (don't translate their
+# words for them — just use their real sentence as given). Each entry needs
+# exactly two fields:
+#
+#   quote:       the testimonial text itself, without quotation marks
+#                (the design adds its own curly quotes automatically)
+#   attribution: who it's from, in the style "Name — Event Type, Location"
+#
+# Example (remove the leading "# " from each line to activate):
+#
+# - quote: "Helena and Elias made our wedding reception feel effortless — guests were still talking about them weeks later."
+#   attribution: "Sarah & Tom — Wedding, Zürich"
+#
+# - quote: "Exactly the warm, unobtrusive background music our dinner needed."
+#   attribution: "Markus B. — Corporate Dinner, Basel"
+#
+# You can add as many as you like; they lay out two per row on desktop,
+# stacked on mobile. Only real quotes from real past clients — see the
+# project brief for why (booking-focused sites lose trust fast over faked
+# social proof).
