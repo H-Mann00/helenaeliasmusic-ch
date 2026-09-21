@@ -43,9 +43,9 @@ Hier sind einige unserer Videos, damit du einen Eindruck von unserem Stil bekomm
 <div class="videos-grid">
   <div class="video-item">
     <div class="video-wrapper">
-      <iframe src="https://www.youtube.com/embed/O3YVn8o4_yU" title="While My Guitar Gently Weeps - The Beatles (Cover)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      <iframe src="https://www.youtube.com/embed/WbMxYo7LSyM" title="Back to Black - Amy Winehouse (Cover)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     </div>
-    <h3 class="video-title">While My Guitar Gently Weeps - The Beatles (Cover)</h3>
+    <h3 class="video-title">Back to Black - Amy Winehouse (Cover)</h3>
   </div>
 
   <div class="video-item">
@@ -53,13 +53,6 @@ Hier sind einige unserer Videos, damit du einen Eindruck von unserem Stil bekomm
       <iframe src="https://www.youtube.com/embed/tSf21GInbaI" title="How Deep Is Your Love - Bee Gees (Cover)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     </div>
     <h3 class="video-title">How Deep Is Your Love - Bee Gees (Cover)</h3>
-  </div>
-
-  <div class="video-item">
-    <div class="video-wrapper">
-      <iframe src="https://www.youtube.com/embed/xDSV2egkf80" title="Fly Me to the Moon - Frank Sinatra (Cover)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-    </div>
-    <h3 class="video-title">Fly Me to the Moon - Frank Sinatra (Cover)</h3>
   </div>
 
   <div class="video-item">
