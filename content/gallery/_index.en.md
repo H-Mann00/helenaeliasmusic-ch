@@ -6,6 +6,17 @@ A collection of photos from our performances and events.
 
 <small><i>Click any photo to view it in full size.</i></small>
 
+<h2>Frank & Laura's Wedding</h2>
+
+<div class="photo-grid">
+  <div class="photo-grid-item"><img src="/img/gallery/wedding-1.jpg" alt="The couple with wedding guests applauding as Helena and Elias perform" loading="lazy"></div>
+  <div class="photo-grid-item"><img src="/img/gallery/wedding-2.jpg" alt="Helena hugging a wedding guest, Elias's guitar in the foreground" loading="lazy"></div>
+  <div class="photo-grid-item"><img src="/img/gallery/wedding-3.jpg" alt="Elias playing guitar and Helena singing at the wedding" loading="lazy"></div>
+  <div class="photo-grid-item"><img src="/img/gallery/wedding-4.jpg" alt="Helena and Elias with the groom and bride dancing" loading="lazy"></div>
+  <div class="photo-grid-item"><img src="/img/gallery/wedding-5.jpg" alt="Helena singing with Elias on guitar at the wedding reception" loading="lazy"></div>
+  <div class="photo-grid-item"><img src="/img/gallery/wedding-6.jpg" alt="Helena singing and Elias playing guitar in a brick hall" loading="lazy"></div>
+</div>
+
 <h2>Private Events</h2>
 
 <div class="photo-grid">
