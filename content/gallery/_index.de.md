@@ -6,6 +6,17 @@ Eine Sammlung von Fotos aus unseren Auftritten und Events.
 
 <small><i>Klicke auf ein Bild, um es in voller Grösse anzuschauen.</i></small>
 
+<h2>Hochzeit von Frank & Laura</h2>
+
+<div class="photo-grid">
+  <div class="photo-grid-item"><img src="/img/gallery/wedding-1.jpg" alt="Das Brautpaar mit applaudierenden Hochzeitsgästen, während Helena und Elias auftreten" loading="lazy"></div>
+  <div class="photo-grid-item"><img src="/img/gallery/wedding-2.jpg" alt="Helena umarmt einen Hochzeitsgast, im Vordergrund Eliass Gitarre" loading="lazy"></div>
+  <div class="photo-grid-item"><img src="/img/gallery/wedding-3.jpg" alt="Elias spielt Gitarre und Helena singt an der Hochzeit" loading="lazy"></div>
+  <div class="photo-grid-item"><img src="/img/gallery/wedding-4.jpg" alt="Helena und Elias tanzen mit Bräutigam und Braut" loading="lazy"></div>
+  <div class="photo-grid-item"><img src="/img/gallery/wedding-5.jpg" alt="Helena singt, Elias begleitet auf der Gitarre beim Hochzeitsempfang" loading="lazy"></div>
+  <div class="photo-grid-item"><img src="/img/gallery/wedding-6.jpg" alt="Helena singt und Elias spielt Gitarre in einer Backsteinhalle" loading="lazy"></div>
+</div>
+
 <h2>Private Anlässe</h2>
 
 <div class="photo-grid">

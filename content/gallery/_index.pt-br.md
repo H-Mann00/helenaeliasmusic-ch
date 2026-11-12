@@ -6,6 +6,17 @@ Uma coleção de fotos das nossas apresentações e eventos.
 
 <small><i>Clique em qualquer foto para vê-la em tamanho completo.</i></small>
 
+<h2>Casamento de Frank & Laura</h2>
+
+<div class="photo-grid">
+  <div class="photo-grid-item"><img src="/img/gallery/wedding-1.jpg" alt="O casal com convidados aplaudindo enquanto Helena e Elias se apresentam" loading="lazy"></div>
+  <div class="photo-grid-item"><img src="/img/gallery/wedding-2.jpg" alt="Helena abraçando uma convidada, com o violão de Elias em primeiro plano" loading="lazy"></div>
+  <div class="photo-grid-item"><img src="/img/gallery/wedding-3.jpg" alt="Elias tocando violão e Helena cantando no casamento" loading="lazy"></div>
+  <div class="photo-grid-item"><img src="/img/gallery/wedding-4.jpg" alt="Helena e Elias dançando com o noivo e a noiva" loading="lazy"></div>
+  <div class="photo-grid-item"><img src="/img/gallery/wedding-5.jpg" alt="Helena cantando com Elias ao violão na recepção do casamento" loading="lazy"></div>
+  <div class="photo-grid-item"><img src="/img/gallery/wedding-6.jpg" alt="Helena cantando e Elias tocando violão em um salão de tijolos" loading="lazy"></div>
+</div>
+
 <h2>Eventos Privados</h2>
 
 <div class="photo-grid">
